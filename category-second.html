@@ -127,15 +127,14 @@
 		</div>
 	</div>
 	<script type="text/html" id="tpl">
-		<% for (var i = 0; i < rows.length; i++) { %>
+		<% for (var i = 0; i < list.rows.length; i++) { %>
 			<tr>
-    			<td><%=rows[i].id%></td>
-    			<td><%=rows[i].brandName%></td>
+    			<td><%=list.rows[i].id%></td>
+    			<td><%=list.rows[i].brandName%></td>
     			<td>
-    				<img src="<%=api%><%=rows[i].brandLogo%>">
-    				<!-- <img src="http://localhost:3000<%=rows[i].brandLogo%>"> -->
+    				<img src="<%=api%><%=list.rows[i].brandLogo%>">
     			</td>
-    			<td><%=rows[i].categoryName%></td>
+    			<td><%=list.rows[i].categoryName%></td>
     		</tr>
     	<% } %>
 	</script>

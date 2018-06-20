@@ -5,11 +5,13 @@ $(function () {
 		data: {
 			page: 1,
 			pageSize: 10,
-			api: APP.baseUrl
 		},
 		success: function (response) {
 			console.log(response);
-			var html = template('tpl', response);
+			var html = template('tpl', {
+				list: response,
+				api: APP.baseUrl
+			});
 			$('#category-secondBox').html(html);
 		}
 	});
