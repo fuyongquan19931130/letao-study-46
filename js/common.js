@@ -13,8 +13,11 @@ $(function(){
 // 全局配置
 var APP = {
 	// 配置接口基础路径
-	baseUrl: 'http://fullstack.net.cn:3000'
+	// baseUrl: 'http://fullstack.net.cn:3000'
+	baseUrl: 'http://localhost:3000'
 }
+
+$.ajaxSetup({crossDomain: true, xhrFields: {withCredentials: true}});
 
 // 获取页面表单中的数据
 $.fn.serializeToJson = function () {
